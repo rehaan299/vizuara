@@ -1,0 +1,28 @@
+# Ignore Python bytecode files
+*.py[cod]
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints
+
+# Ignore virtual environment directory
+venv/
+
+# Ignore log files
+*.log
+
+# Ignore compiled Python files
+__pycache__/
+
+# Ignore CSV files (if they are generated or should not be tracked)
+*.csv
+
+# Ignore video files
+*.mp4
+*.avi
+*.mov
+
+# Ignore static files (if they are generated or should not be tracked)
+static/
+
+# Ignore templates (if they are generated or should not be tracked)
+templates/
