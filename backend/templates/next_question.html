@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next Question</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Question {{ question_number }}</h2>
+      <p>{{ question['Question'] }}</p>
+      <form action="{{ url_for('next_question') }}" method="post">
+        {% for index, option in enumerate(question['Options']) %}
+        <div>
+          <input
+            type="radio"
+            id="option{{ index }}"
+            name="answer"
+            value="{{ index + 1 }}"
+          />
+          <label for="option{{ index }}">{{ option }}</label>
+        </div>
+        {% endfor %}
+        <button type="submit">Submit</button>
+      </form>
+      <p>Current Proficiency: {{ proficiency }}%</p>
+    </div>
+  </body>
+</html>
